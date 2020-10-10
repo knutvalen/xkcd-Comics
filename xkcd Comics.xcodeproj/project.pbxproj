@@ -7,20 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC743077253255530041D3FB /* ComicListScreenTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC743076253255530041D3FB /* ComicListScreenTypes.swift */; };
 		CC99789C253240890071EFCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789B253240890071EFCD /* AppDelegate.swift */; };
 		CC99789E253240890071EFCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789D253240890071EFCD /* SceneDelegate.swift */; };
-		CC9978A0253240890071EFCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789F253240890071EFCD /* ViewController.swift */; };
-		CC9978A3253240890071EFCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9978A1253240890071EFCD /* Main.storyboard */; };
 		CC9978A52532408C0071EFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9978A42532408C0071EFCD /* Assets.xcassets */; };
 		CC9978A82532408C0071EFCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9978A62532408C0071EFCD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC743076253255530041D3FB /* ComicListScreenTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenTypes.swift; sourceTree = "<group>"; };
 		CC997898253240890071EFCD /* xkcd Comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xkcd Comics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC99789B253240890071EFCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC99789D253240890071EFCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC99789F253240890071EFCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CC9978A2253240890071EFCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC9978A42532408C0071EFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC9978A72532408C0071EFCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC9978A92532408C0071EFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +35,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC74306D253245F70041D3FB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CC743071253254D60041D3FB /* ComicListScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CC743071253254D60041D3FB /* ComicListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CC743076253255530041D3FB /* ComicListScreenTypes.swift */,
+				CC7430752532553E0041D3FB /* View */,
+				CC743074253255360041D3FB /* Interactor */,
+				CC7430732532552C0041D3FB /* Presenter */,
+				CC743072253255190041D3FB /* Router */,
+			);
+			path = ComicListScreen;
+			sourceTree = "<group>";
+		};
+		CC743072253255190041D3FB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CC7430732532552C0041D3FB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC743074253255360041D3FB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC7430752532553E0041D3FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CC99788F253240890071EFCD = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +102,9 @@
 		CC99789A253240890071EFCD /* xkcd Comics */ = {
 			isa = PBXGroup;
 			children = (
+				CC74306D253245F70041D3FB /* Screens */,
 				CC99789B253240890071EFCD /* AppDelegate.swift */,
 				CC99789D253240890071EFCD /* SceneDelegate.swift */,
-				CC99789F253240890071EFCD /* ViewController.swift */,
-				CC9978A1253240890071EFCD /* Main.storyboard */,
 				CC9978A42532408C0071EFCD /* Assets.xcassets */,
 				CC9978A62532408C0071EFCD /* LaunchScreen.storyboard */,
 				CC9978A92532408C0071EFCD /* Info.plist */,
@@ -126,7 +171,6 @@
 			files = (
 				CC9978A82532408C0071EFCD /* LaunchScreen.storyboard in Resources */,
 				CC9978A52532408C0071EFCD /* Assets.xcassets in Resources */,
-				CC9978A3253240890071EFCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +181,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9978A0253240890071EFCD /* ViewController.swift in Sources */,
 				CC99789C253240890071EFCD /* AppDelegate.swift in Sources */,
 				CC99789E253240890071EFCD /* SceneDelegate.swift in Sources */,
+				CC743077253255530041D3FB /* ComicListScreenTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CC9978A1253240890071EFCD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC9978A2253240890071EFCD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CC9978A62532408C0071EFCD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
