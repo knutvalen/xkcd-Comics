@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC743077253255530041D3FB /* ComicListScreenTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC743076253255530041D3FB /* ComicListScreenTypes.swift */; };
+		CC74307C2532563E0041D3FB /* ComicListScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74307B2532563E0041D3FB /* ComicListScreenRouter.swift */; };
 		CC99789C253240890071EFCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789B253240890071EFCD /* AppDelegate.swift */; };
 		CC99789E253240890071EFCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789D253240890071EFCD /* SceneDelegate.swift */; };
 		CC9978A52532408C0071EFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9978A42532408C0071EFCD /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		CC743076253255530041D3FB /* ComicListScreenTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenTypes.swift; sourceTree = "<group>"; };
+		CC74307B2532563E0041D3FB /* ComicListScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenRouter.swift; sourceTree = "<group>"; };
 		CC997898253240890071EFCD /* xkcd Comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xkcd Comics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC99789B253240890071EFCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC99789D253240890071EFCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		CC743072253255190041D3FB /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				CC74307B2532563E0041D3FB /* ComicListScreenRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			files = (
 				CC99789C253240890071EFCD /* AppDelegate.swift in Sources */,
 				CC99789E253240890071EFCD /* SceneDelegate.swift in Sources */,
+				CC74307C2532563E0041D3FB /* ComicListScreenRouter.swift in Sources */,
 				CC743077253255530041D3FB /* ComicListScreenTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
