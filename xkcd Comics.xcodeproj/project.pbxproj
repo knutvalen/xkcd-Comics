@@ -22,7 +22,7 @@
 		CC74307B2532563E0041D3FB /* ComicListScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenRouter.swift; sourceTree = "<group>"; };
 		CC74307E2532571E0041D3FB /* ComicListScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComicListScreenStoryboard.storyboard; sourceTree = "<group>"; };
 		CC743081253257360041D3FB /* ComicListScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenViewController.swift; sourceTree = "<group>"; };
-		CC997898253240890071EFCD /* xkcd Comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xkcd Comics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC74308E25325F2E0041D3FB /* xkcd Comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xkcd Comics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC99789B253240890071EFCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC99789D253240890071EFCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC9978A42532408C0071EFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,16 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				CC99789A253240890071EFCD /* xkcd Comics */,
-				CC997899253240890071EFCD /* Products */,
+				CC74308E25325F2E0041D3FB /* xkcd Comics.app */,
 			);
-			sourceTree = "<group>";
-		};
-		CC997899253240890071EFCD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CC997898253240890071EFCD /* xkcd Comics.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CC99789A253240890071EFCD /* xkcd Comics */ = {
@@ -138,7 +130,7 @@
 			);
 			name = "xkcd Comics";
 			productName = "xkcd Comics";
-			productReference = CC997898253240890071EFCD /* xkcd Comics.app */;
+			productReference = CC74308E25325F2E0041D3FB /* xkcd Comics.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -164,7 +156,7 @@
 				Base,
 			);
 			mainGroup = CC99788F253240890071EFCD;
-			productRefGroup = CC997899253240890071EFCD /* Products */;
+			productRefGroup = CC99788F253240890071EFCD;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -344,7 +336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "no.knutvalen.xkcd-Comics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -363,7 +355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "no.knutvalen.xkcd-Comics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

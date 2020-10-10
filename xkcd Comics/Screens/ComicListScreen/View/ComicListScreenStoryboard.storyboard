@@ -15,8 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="5Mz-qJ-6mF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ComicListScreen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBD-r7-lMD">
+                                <rect key="frame" x="142.5" y="442.5" width="129.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="EXL-Vl-IHg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VBD-r7-lMD" firstAttribute="centerX" secondItem="EXL-Vl-IHg" secondAttribute="centerX" id="40I-i6-lQy"/>
+                            <constraint firstItem="VBD-r7-lMD" firstAttribute="centerY" secondItem="EXL-Vl-IHg" secondAttribute="centerY" id="Ynr-4k-slh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVC-wu-BUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
