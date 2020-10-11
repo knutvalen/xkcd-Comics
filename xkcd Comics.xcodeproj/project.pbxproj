@@ -11,6 +11,8 @@
 		CC74307C2532563E0041D3FB /* ComicListScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74307B2532563E0041D3FB /* ComicListScreenRouter.swift */; };
 		CC74307F2532571E0041D3FB /* ComicListScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC74307E2532571E0041D3FB /* ComicListScreenStoryboard.storyboard */; };
 		CC743082253257360041D3FB /* ComicListScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC743081253257360041D3FB /* ComicListScreenViewController.swift */; };
+		CC74309425330AE00041D3FB /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74309325330AE00041D3FB /* WebService.swift */; };
+		CC74309825330B3A0041D3FB /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74309725330B3A0041D3FB /* HTTPService.swift */; };
 		CC99789C253240890071EFCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789B253240890071EFCD /* AppDelegate.swift */; };
 		CC99789E253240890071EFCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789D253240890071EFCD /* SceneDelegate.swift */; };
 		CC9978A52532408C0071EFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9978A42532408C0071EFCD /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		CC74307E2532571E0041D3FB /* ComicListScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComicListScreenStoryboard.storyboard; sourceTree = "<group>"; };
 		CC743081253257360041D3FB /* ComicListScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenViewController.swift; sourceTree = "<group>"; };
 		CC74308E25325F2E0041D3FB /* xkcd Comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xkcd Comics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC74309325330AE00041D3FB /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		CC74309725330B3A0041D3FB /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
 		CC99789B253240890071EFCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC99789D253240890071EFCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC9978A42532408C0071EFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CC74309125330A820041D3FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CC74309325330AE00041D3FB /* WebService.swift */,
+				CC74309725330B3A0041D3FB /* HTTPService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CC99788F253240890071EFCD = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +116,7 @@
 		CC99789A253240890071EFCD /* xkcd Comics */ = {
 			isa = PBXGroup;
 			children = (
+				CC74309125330A820041D3FB /* Services */,
 				CC74306D253245F70041D3FB /* Screens */,
 				CC99789B253240890071EFCD /* AppDelegate.swift */,
 				CC99789D253240890071EFCD /* SceneDelegate.swift */,
@@ -183,10 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC74309425330AE00041D3FB /* WebService.swift in Sources */,
 				CC99789C253240890071EFCD /* AppDelegate.swift in Sources */,
 				CC99789E253240890071EFCD /* SceneDelegate.swift in Sources */,
 				CC74307C2532563E0041D3FB /* ComicListScreenRouter.swift in Sources */,
 				CC743082253257360041D3FB /* ComicListScreenViewController.swift in Sources */,
+				CC74309825330B3A0041D3FB /* HTTPService.swift in Sources */,
 				CC743077253255530041D3FB /* ComicListScreenTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
