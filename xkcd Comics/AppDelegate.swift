@@ -1,16 +1,26 @@
-//
-//  AppDelegate.swift
-//  xkcd Comics
-//
-//  Created by Knut Valen on 10/10/2020.
-//
-
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+	var webService: WebService?
+	
+	func application(
+		_ application: UIApplication,
+		didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+	) -> Bool {
+		webService = WebService(
+			httpService: HTTPService(
+				endpoint: Constants.BackendAPI.endpoint,
+				httpLogger: HTTPLogger(
+					simpleLog: false,
+					redactableHeaders: [],
+					redactHeaders: false,
+					hideBody: false,
+					prettyPrintBody: true
+				)
+			)
+		)
+		
 		return true
 	}
 

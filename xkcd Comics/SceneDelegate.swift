@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  xkcd Comics
-//
-//  Created by Knut Valen on 10/10/2020.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

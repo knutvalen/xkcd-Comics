@@ -3,16 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7FCF58E4465A41E65CF313D /* Pods_xkcd_Comics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3154D0E9C2B941FC26C1C2F1 /* Pods_xkcd_Comics.framework */; };
 		CC743077253255530041D3FB /* ComicListScreenTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC743076253255530041D3FB /* ComicListScreenTypes.swift */; };
 		CC74307C2532563E0041D3FB /* ComicListScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74307B2532563E0041D3FB /* ComicListScreenRouter.swift */; };
 		CC74307F2532571E0041D3FB /* ComicListScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC74307E2532571E0041D3FB /* ComicListScreenStoryboard.storyboard */; };
 		CC743082253257360041D3FB /* ComicListScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC743081253257360041D3FB /* ComicListScreenViewController.swift */; };
 		CC74309425330AE00041D3FB /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74309325330AE00041D3FB /* WebService.swift */; };
 		CC74309825330B3A0041D3FB /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74309725330B3A0041D3FB /* HTTPService.swift */; };
+		CC74309D25330EB00041D3FB /* WebServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74309C25330EB00041D3FB /* WebServiceError.swift */; };
+		CC7430A3253312940041D3FB /* URL+ParameterEncodings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430A2253312940041D3FB /* URL+ParameterEncodings.swift */; };
+		CC7430A6253312FE0041D3FB /* String+addingPercentEncodingQueryParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430A5253312FE0041D3FB /* String+addingPercentEncodingQueryParameter.swift */; };
+		CC7430A9253313AA0041D3FB /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430A8253313AA0041D3FB /* HTTPMethod.swift */; };
+		CC7430AF253316640041D3FB /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430AE253316640041D3FB /* ReachabilityService.swift */; };
+		CC7430B22533193E0041D3FB /* ReachabilityActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430B12533193E0041D3FB /* ReachabilityActionDelegate.swift */; };
+		CC7430B52533A2890041D3FB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430B42533A2890041D3FB /* Constants.swift */; };
+		CC7430B82533A4E30041D3FB /* ComicListScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430B72533A4E30041D3FB /* ComicListScreenInteractor.swift */; };
+		CC7430BB2533A5850041D3FB /* ComicListScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430BA2533A5850041D3FB /* ComicListScreenPresenter.swift */; };
+		CC7430BE2534C7AD0041D3FB /* HTTPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430BD2534C7AD0041D3FB /* HTTPLogger.swift */; };
 		CC99789C253240890071EFCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789B253240890071EFCD /* AppDelegate.swift */; };
 		CC99789E253240890071EFCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789D253240890071EFCD /* SceneDelegate.swift */; };
 		CC9978A52532408C0071EFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9978A42532408C0071EFCD /* Assets.xcassets */; };
@@ -20,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3154D0E9C2B941FC26C1C2F1 /* Pods_xkcd_Comics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xkcd_Comics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C09E133A1B229A252623E19F /* Pods-xkcd Comics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xkcd Comics.debug.xcconfig"; path = "Target Support Files/Pods-xkcd Comics/Pods-xkcd Comics.debug.xcconfig"; sourceTree = "<group>"; };
 		CC743076253255530041D3FB /* ComicListScreenTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenTypes.swift; sourceTree = "<group>"; };
 		CC74307B2532563E0041D3FB /* ComicListScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenRouter.swift; sourceTree = "<group>"; };
 		CC74307E2532571E0041D3FB /* ComicListScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComicListScreenStoryboard.storyboard; sourceTree = "<group>"; };
@@ -27,11 +40,22 @@
 		CC74308E25325F2E0041D3FB /* xkcd Comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xkcd Comics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC74309325330AE00041D3FB /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		CC74309725330B3A0041D3FB /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
+		CC74309C25330EB00041D3FB /* WebServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceError.swift; sourceTree = "<group>"; };
+		CC7430A2253312940041D3FB /* URL+ParameterEncodings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ParameterEncodings.swift"; sourceTree = "<group>"; };
+		CC7430A5253312FE0041D3FB /* String+addingPercentEncodingQueryParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+addingPercentEncodingQueryParameter.swift"; sourceTree = "<group>"; };
+		CC7430A8253313AA0041D3FB /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		CC7430AE253316640041D3FB /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
+		CC7430B12533193E0041D3FB /* ReachabilityActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityActionDelegate.swift; sourceTree = "<group>"; };
+		CC7430B42533A2890041D3FB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CC7430B72533A4E30041D3FB /* ComicListScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenInteractor.swift; sourceTree = "<group>"; };
+		CC7430BA2533A5850041D3FB /* ComicListScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenPresenter.swift; sourceTree = "<group>"; };
+		CC7430BD2534C7AD0041D3FB /* HTTPLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLogger.swift; sourceTree = "<group>"; };
 		CC99789B253240890071EFCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC99789D253240890071EFCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC9978A42532408C0071EFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC9978A72532408C0071EFCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC9978A92532408C0071EFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1C27F0A8EF2CCDDA43D71E7 /* Pods-xkcd Comics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xkcd Comics.release.xcconfig"; path = "Target Support Files/Pods-xkcd Comics/Pods-xkcd Comics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,12 +63,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7FCF58E4465A41E65CF313D /* Pods_xkcd_Comics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		721F10623DA6920CF427BE6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3154D0E9C2B941FC26C1C2F1 /* Pods_xkcd_Comics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		865A520E0A0A50D68781F7B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C09E133A1B229A252623E19F /* Pods-xkcd Comics.debug.xcconfig */,
+				E1C27F0A8EF2CCDDA43D71E7 /* Pods-xkcd Comics.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CC74306D253245F70041D3FB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +118,7 @@
 		CC7430732532552C0041D3FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CC7430BA2533A5850041D3FB /* ComicListScreenPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -83,6 +126,7 @@
 		CC743074253255360041D3FB /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				CC7430B72533A4E30041D3FB /* ComicListScreenInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -101,8 +145,30 @@
 			children = (
 				CC74309325330AE00041D3FB /* WebService.swift */,
 				CC74309725330B3A0041D3FB /* HTTPService.swift */,
+				CC7430AE253316640041D3FB /* ReachabilityService.swift */,
+				CC7430BD2534C7AD0041D3FB /* HTTPLogger.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CC74309B25330E7A0041D3FB /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				CC74309C25330EB00041D3FB /* WebServiceError.swift */,
+				CC7430A8253313AA0041D3FB /* HTTPMethod.swift */,
+				CC7430B12533193E0041D3FB /* ReachabilityActionDelegate.swift */,
+				CC7430B42533A2890041D3FB /* Constants.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		CC7430A12533123B0041D3FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC7430A2253312940041D3FB /* URL+ParameterEncodings.swift */,
+				CC7430A5253312FE0041D3FB /* String+addingPercentEncodingQueryParameter.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CC99788F253240890071EFCD = {
@@ -110,14 +176,18 @@
 			children = (
 				CC99789A253240890071EFCD /* xkcd Comics */,
 				CC74308E25325F2E0041D3FB /* xkcd Comics.app */,
+				865A520E0A0A50D68781F7B0 /* Pods */,
+				721F10623DA6920CF427BE6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		CC99789A253240890071EFCD /* xkcd Comics */ = {
 			isa = PBXGroup;
 			children = (
-				CC74309125330A820041D3FB /* Services */,
 				CC74306D253245F70041D3FB /* Screens */,
+				CC74309125330A820041D3FB /* Services */,
+				CC74309B25330E7A0041D3FB /* Configurations */,
+				CC7430A12533123B0041D3FB /* Extensions */,
 				CC99789B253240890071EFCD /* AppDelegate.swift */,
 				CC99789D253240890071EFCD /* SceneDelegate.swift */,
 				CC9978A42532408C0071EFCD /* Assets.xcassets */,
@@ -134,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC9978AC2532408C0071EFCD /* Build configuration list for PBXNativeTarget "xkcd Comics" */;
 			buildPhases = (
+				DA85229E118D7E8AB900F7AD /* [CP] Check Pods Manifest.lock */,
 				CC997894253240890071EFCD /* Sources */,
 				CC997895253240890071EFCD /* Frameworks */,
 				CC997896253240890071EFCD /* Resources */,
+				08AA55E11030DAE71718893C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,16 +264,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08AA55E11030DAE71718893C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-xkcd Comics/Pods-xkcd Comics-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-xkcd Comics/Pods-xkcd Comics-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-xkcd Comics/Pods-xkcd Comics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA85229E118D7E8AB900F7AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xkcd Comics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CC997894253240890071EFCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7430B22533193E0041D3FB /* ReachabilityActionDelegate.swift in Sources */,
 				CC74309425330AE00041D3FB /* WebService.swift in Sources */,
+				CC7430A3253312940041D3FB /* URL+ParameterEncodings.swift in Sources */,
+				CC7430AF253316640041D3FB /* ReachabilityService.swift in Sources */,
+				CC74309D25330EB00041D3FB /* WebServiceError.swift in Sources */,
+				CC7430B82533A4E30041D3FB /* ComicListScreenInteractor.swift in Sources */,
+				CC7430A9253313AA0041D3FB /* HTTPMethod.swift in Sources */,
 				CC99789C253240890071EFCD /* AppDelegate.swift in Sources */,
+				CC7430BE2534C7AD0041D3FB /* HTTPLogger.swift in Sources */,
+				CC7430BB2533A5850041D3FB /* ComicListScreenPresenter.swift in Sources */,
 				CC99789E253240890071EFCD /* SceneDelegate.swift in Sources */,
+				CC7430A6253312FE0041D3FB /* String+addingPercentEncodingQueryParameter.swift in Sources */,
 				CC74307C2532563E0041D3FB /* ComicListScreenRouter.swift in Sources */,
 				CC743082253257360041D3FB /* ComicListScreenViewController.swift in Sources */,
+				CC7430B52533A2890041D3FB /* Constants.swift in Sources */,
 				CC74309825330B3A0041D3FB /* HTTPService.swift in Sources */,
 				CC743077253255530041D3FB /* ComicListScreenTypes.swift in Sources */,
 			);
@@ -339,6 +463,7 @@
 		};
 		CC9978AD2532408C0071EFCD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C09E133A1B229A252623E19F /* Pods-xkcd Comics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +483,7 @@
 		};
 		CC9978AE2532408C0071EFCD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1C27F0A8EF2CCDDA43D71E7 /* Pods-xkcd Comics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
