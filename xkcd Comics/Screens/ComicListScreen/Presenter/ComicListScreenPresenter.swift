@@ -4,6 +4,7 @@ final class ComicListScreenPresenter: ComicListScreenPresenterType {
 	private var view: ComicListScreenViewType
 	private var interactor: ComicListScreenInteractorType
 	private var router: ComicListScreenRouterType
+	private var comicModelEntity: ComicModel?
 	
 	// MARK: - Public functions
 	
@@ -21,7 +22,11 @@ final class ComicListScreenPresenter: ComicListScreenPresenterType {
 	
 	func viewDidAppear() {
 		interactor.getComic(comicNumber: 666) { (data, error) in
-			// TODO
+			if let data = data,
+			   let entity = try? JSONDecoder().decode(ComicModel.self, from: data)
+			{
+				self.comicModelEntity = entity
+			}
 		}
 	}
 	

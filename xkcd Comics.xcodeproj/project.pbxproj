@@ -24,6 +24,7 @@
 		CC7430B82533A4E30041D3FB /* ComicListScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430B72533A4E30041D3FB /* ComicListScreenInteractor.swift */; };
 		CC7430BB2533A5850041D3FB /* ComicListScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430BA2533A5850041D3FB /* ComicListScreenPresenter.swift */; };
 		CC7430BE2534C7AD0041D3FB /* HTTPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430BD2534C7AD0041D3FB /* HTTPLogger.swift */; };
+		CC7430C32534DDEE0041D3FB /* ComicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430C22534DDEE0041D3FB /* ComicModel.swift */; };
 		CC99789C253240890071EFCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789B253240890071EFCD /* AppDelegate.swift */; };
 		CC99789E253240890071EFCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789D253240890071EFCD /* SceneDelegate.swift */; };
 		CC9978A52532408C0071EFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9978A42532408C0071EFCD /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		CC7430B72533A4E30041D3FB /* ComicListScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenInteractor.swift; sourceTree = "<group>"; };
 		CC7430BA2533A5850041D3FB /* ComicListScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenPresenter.swift; sourceTree = "<group>"; };
 		CC7430BD2534C7AD0041D3FB /* HTTPLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLogger.swift; sourceTree = "<group>"; };
+		CC7430C22534DDEE0041D3FB /* ComicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicModel.swift; sourceTree = "<group>"; };
 		CC99789B253240890071EFCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC99789D253240890071EFCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC9978A42532408C0071EFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,6 +173,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CC7430C02534DD940041D3FB /* Domain Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC7430C22534DDEE0041D3FB /* ComicModel.swift */,
+			);
+			path = "Domain Models";
+			sourceTree = "<group>";
+		};
+		CC7430C12534DDA00041D3FB /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		CC99788F253240890071EFCD = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				CC74306D253245F70041D3FB /* Screens */,
+				CC7430C12534DDA00041D3FB /* View Models */,
+				CC7430C02534DD940041D3FB /* Domain Models */,
 				CC74309125330A820041D3FB /* Services */,
 				CC74309B25330E7A0041D3FB /* Configurations */,
 				CC7430A12533123B0041D3FB /* Extensions */,
@@ -316,6 +335,7 @@
 				CC7430A3253312940041D3FB /* URL+ParameterEncodings.swift in Sources */,
 				CC7430AF253316640041D3FB /* ReachabilityService.swift in Sources */,
 				CC74309D25330EB00041D3FB /* WebServiceError.swift in Sources */,
+				CC7430C32534DDEE0041D3FB /* ComicModel.swift in Sources */,
 				CC7430B82533A4E30041D3FB /* ComicListScreenInteractor.swift in Sources */,
 				CC7430A9253313AA0041D3FB /* HTTPMethod.swift in Sources */,
 				CC99789C253240890071EFCD /* AppDelegate.swift in Sources */,
