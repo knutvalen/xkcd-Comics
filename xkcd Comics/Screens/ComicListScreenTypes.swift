@@ -14,6 +14,10 @@ protocol ComicListScreenInteractorType {
 protocol ComicListScreenPresenterType {
 	func viewDidAppear()
 	func prefetch(indexPaths: [IndexPath])
+	func getViewModel() -> TableViewRowViewModel?
+	func getViewModels() -> [TableViewSectionViewModel]
+	func getSectionViewModel(for section: Int) -> TableViewSectionViewModel?
+	func didSelectTableViewCell(at indexPath: IndexPath)
 }
 
 protocol ComicListScreenRouterType {

@@ -1,6 +1,7 @@
 import Foundation
 
 final class ComicListScreenPresenter: ComicListScreenPresenterType {
+	
 	private var view: ComicListScreenViewType
 	private var interactor: ComicListScreenInteractorType
 	private var router: ComicListScreenRouterType
@@ -31,6 +32,22 @@ final class ComicListScreenPresenter: ComicListScreenPresenterType {
 	}
 	
 	func prefetch(indexPaths: [IndexPath]) {
+		// TODO
+	}
+	
+	func getViewModel() -> TableViewRowViewModel? {
+		return nil
+	}
+	
+	func getViewModels() -> [TableViewSectionViewModel] {
+		return []
+	}
+	
+	func getSectionViewModel(for section: Int) -> TableViewSectionViewModel? {
+		return nil
+	}
+	
+	func didSelectTableViewCell(at indexPath: IndexPath) {
 		// TODO
 	}
 	
