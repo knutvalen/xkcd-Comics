@@ -13,6 +13,7 @@ protocol ComicListScreenInteractorType {
 
 protocol ComicListScreenPresenterType {
 	func viewDidAppear()
+	func prefetch(indexPaths: [IndexPath])
 }
 
 protocol ComicListScreenRouterType {

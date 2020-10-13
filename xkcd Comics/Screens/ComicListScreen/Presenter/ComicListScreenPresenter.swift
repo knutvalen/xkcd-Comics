@@ -30,4 +30,8 @@ final class ComicListScreenPresenter: ComicListScreenPresenterType {
 		}
 	}
 	
+	func prefetch(indexPaths: [IndexPath]) {
+		// TODO
+	}
+	
 }

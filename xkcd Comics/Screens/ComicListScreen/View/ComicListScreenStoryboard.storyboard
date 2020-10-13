@@ -16,20 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ComicListScreen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBD-r7-lMD">
-                                <rect key="frame" x="142.5" y="442.5" width="129.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="du6-AD-MPO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BnE-1M-VbO" id="vk9-eW-puK"/>
+                                    <outlet property="delegate" destination="BnE-1M-VbO" id="k3H-xh-BD2"/>
+                                    <outlet property="prefetchDataSource" destination="BnE-1M-VbO" id="3CS-DI-HZX"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EXL-Vl-IHg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VBD-r7-lMD" firstAttribute="centerX" secondItem="EXL-Vl-IHg" secondAttribute="centerX" id="40I-i6-lQy"/>
-                            <constraint firstItem="VBD-r7-lMD" firstAttribute="centerY" secondItem="EXL-Vl-IHg" secondAttribute="centerY" id="Ynr-4k-slh"/>
+                            <constraint firstItem="du6-AD-MPO" firstAttribute="leading" secondItem="EXL-Vl-IHg" secondAttribute="leading" id="bSk-o2-SSh"/>
+                            <constraint firstItem="EXL-Vl-IHg" firstAttribute="bottom" secondItem="du6-AD-MPO" secondAttribute="bottom" id="edO-ze-XI3"/>
+                            <constraint firstItem="EXL-Vl-IHg" firstAttribute="trailing" secondItem="du6-AD-MPO" secondAttribute="trailing" id="hiG-Jx-ZmU"/>
+                            <constraint firstItem="du6-AD-MPO" firstAttribute="top" secondItem="EXL-Vl-IHg" secondAttribute="top" id="n8i-II-BEV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="du6-AD-MPO" id="Pqn-ka-YKU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVC-wu-BUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

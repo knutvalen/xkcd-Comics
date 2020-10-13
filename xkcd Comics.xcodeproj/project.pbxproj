@@ -25,6 +25,8 @@
 		CC7430BB2533A5850041D3FB /* ComicListScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430BA2533A5850041D3FB /* ComicListScreenPresenter.swift */; };
 		CC7430BE2534C7AD0041D3FB /* HTTPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430BD2534C7AD0041D3FB /* HTTPLogger.swift */; };
 		CC7430C32534DDEE0041D3FB /* ComicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430C22534DDEE0041D3FB /* ComicModel.swift */; };
+		CC7430C725363DE10041D3FB /* TableViewLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7430C625363DE10041D3FB /* TableViewLoadingCell.swift */; };
+		CC7430CA25363DEC0041D3FB /* TableViewLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC7430C925363DEC0041D3FB /* TableViewLoadingCell.xib */; };
 		CC99789C253240890071EFCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789B253240890071EFCD /* AppDelegate.swift */; };
 		CC99789E253240890071EFCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99789D253240890071EFCD /* SceneDelegate.swift */; };
 		CC9978A52532408C0071EFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9978A42532408C0071EFCD /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		CC7430BA2533A5850041D3FB /* ComicListScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenPresenter.swift; sourceTree = "<group>"; };
 		CC7430BD2534C7AD0041D3FB /* HTTPLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLogger.swift; sourceTree = "<group>"; };
 		CC7430C22534DDEE0041D3FB /* ComicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicModel.swift; sourceTree = "<group>"; };
+		CC7430C625363DE10041D3FB /* TableViewLoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewLoadingCell.swift; sourceTree = "<group>"; };
+		CC7430C925363DEC0041D3FB /* TableViewLoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewLoadingCell.xib; sourceTree = "<group>"; };
 		CC99789B253240890071EFCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC99789D253240890071EFCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC9978A42532408C0071EFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CC743071253254D60041D3FB /* ComicListScreen */,
+				CC743076253255530041D3FB /* ComicListScreenTypes.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -100,7 +105,6 @@
 		CC743071253254D60041D3FB /* ComicListScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CC743076253255530041D3FB /* ComicListScreenTypes.swift */,
 				CC7430752532553E0041D3FB /* View */,
 				CC743074253255360041D3FB /* Interactor */,
 				CC7430732532552C0041D3FB /* Presenter */,
@@ -136,6 +140,7 @@
 		CC7430752532553E0041D3FB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC7430C525363DCA0041D3FB /* TableViewLoadingCell */,
 				CC74307E2532571E0041D3FB /* ComicListScreenStoryboard.storyboard */,
 				CC743081253257360041D3FB /* ComicListScreenViewController.swift */,
 			);
@@ -186,6 +191,15 @@
 			children = (
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		CC7430C525363DCA0041D3FB /* TableViewLoadingCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC7430C925363DEC0041D3FB /* TableViewLoadingCell.xib */,
+				CC7430C625363DE10041D3FB /* TableViewLoadingCell.swift */,
+			);
+			path = TableViewLoadingCell;
 			sourceTree = "<group>";
 		};
 		CC99788F253240890071EFCD = {
@@ -277,6 +291,7 @@
 			files = (
 				CC74307F2532571E0041D3FB /* ComicListScreenStoryboard.storyboard in Resources */,
 				CC9978A82532408C0071EFCD /* LaunchScreen.storyboard in Resources */,
+				CC7430CA25363DEC0041D3FB /* TableViewLoadingCell.xib in Resources */,
 				CC9978A52532408C0071EFCD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +348,7 @@
 				CC7430B22533193E0041D3FB /* ReachabilityActionDelegate.swift in Sources */,
 				CC74309425330AE00041D3FB /* WebService.swift in Sources */,
 				CC7430A3253312940041D3FB /* URL+ParameterEncodings.swift in Sources */,
+				CC7430C725363DE10041D3FB /* TableViewLoadingCell.swift in Sources */,
 				CC7430AF253316640041D3FB /* ReachabilityService.swift in Sources */,
 				CC74309D25330EB00041D3FB /* WebServiceError.swift in Sources */,
 				CC7430C32534DDEE0041D3FB /* ComicModel.swift in Sources */,
