@@ -10,6 +10,10 @@
 		C7FCF58E4465A41E65CF313D /* Pods_xkcd_Comics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3154D0E9C2B941FC26C1C2F1 /* Pods_xkcd_Comics.framework */; };
 		CC5C4257253644CB003DCD9F /* TableViewSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C4256253644CB003DCD9F /* TableViewSectionViewModel.swift */; };
 		CC5C425A253645B5003DCD9F /* TableViewRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C4259253645B5003DCD9F /* TableViewRowViewModel.swift */; };
+		CC5C425E2538CE3C003DCD9F /* TableViewComicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C425D2538CE3C003DCD9F /* TableViewComicCell.swift */; };
+		CC5C42622538CE43003DCD9F /* TableViewComicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5C42612538CE43003DCD9F /* TableViewComicCell.xib */; };
+		CC5C42672538D18F003DCD9F /* TableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5C42662538D18F003DCD9F /* TableViewSectionHeader.xib */; };
+		CC5C426A2538D197003DCD9F /* TableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C42692538D197003DCD9F /* TableViewSectionHeader.swift */; };
 		CC743077253255530041D3FB /* ComicListScreenTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC743076253255530041D3FB /* ComicListScreenTypes.swift */; };
 		CC74307C2532563E0041D3FB /* ComicListScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74307B2532563E0041D3FB /* ComicListScreenRouter.swift */; };
 		CC74307F2532571E0041D3FB /* ComicListScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC74307E2532571E0041D3FB /* ComicListScreenStoryboard.storyboard */; };
@@ -40,6 +44,10 @@
 		C09E133A1B229A252623E19F /* Pods-xkcd Comics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xkcd Comics.debug.xcconfig"; path = "Target Support Files/Pods-xkcd Comics/Pods-xkcd Comics.debug.xcconfig"; sourceTree = "<group>"; };
 		CC5C4256253644CB003DCD9F /* TableViewSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionViewModel.swift; sourceTree = "<group>"; };
 		CC5C4259253645B5003DCD9F /* TableViewRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRowViewModel.swift; sourceTree = "<group>"; };
+		CC5C425D2538CE3C003DCD9F /* TableViewComicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewComicCell.swift; sourceTree = "<group>"; };
+		CC5C42612538CE43003DCD9F /* TableViewComicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewComicCell.xib; sourceTree = "<group>"; };
+		CC5C42662538D18F003DCD9F /* TableViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewSectionHeader.xib; sourceTree = "<group>"; };
+		CC5C42692538D197003DCD9F /* TableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionHeader.swift; sourceTree = "<group>"; };
 		CC743076253255530041D3FB /* ComicListScreenTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenTypes.swift; sourceTree = "<group>"; };
 		CC74307B2532563E0041D3FB /* ComicListScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenRouter.swift; sourceTree = "<group>"; };
 		CC74307E2532571E0041D3FB /* ComicListScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComicListScreenStoryboard.storyboard; sourceTree = "<group>"; };
@@ -97,6 +105,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CC5C425C2538CE10003DCD9F /* TableViewComicCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC5C42612538CE43003DCD9F /* TableViewComicCell.xib */,
+				CC5C425D2538CE3C003DCD9F /* TableViewComicCell.swift */,
+			);
+			path = TableViewComicCell;
+			sourceTree = "<group>";
+		};
+		CC5C42652538D17A003DCD9F /* TableViewSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				CC5C42662538D18F003DCD9F /* TableViewSectionHeader.xib */,
+				CC5C42692538D197003DCD9F /* TableViewSectionHeader.swift */,
+			);
+			path = TableViewSectionHeader;
+			sourceTree = "<group>";
+		};
 		CC74306D253245F70041D3FB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +170,8 @@
 		CC7430752532553E0041D3FB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC5C42652538D17A003DCD9F /* TableViewSectionHeader */,
+				CC5C425C2538CE10003DCD9F /* TableViewComicCell */,
 				CC7430C525363DCA0041D3FB /* TableViewLoadingCell */,
 				CC74307E2532571E0041D3FB /* ComicListScreenStoryboard.storyboard */,
 				CC743081253257360041D3FB /* ComicListScreenViewController.swift */,
@@ -295,7 +323,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5C42672538D18F003DCD9F /* TableViewSectionHeader.xib in Resources */,
 				CC74307F2532571E0041D3FB /* ComicListScreenStoryboard.storyboard in Resources */,
+				CC5C42622538CE43003DCD9F /* TableViewComicCell.xib in Resources */,
 				CC9978A82532408C0071EFCD /* LaunchScreen.storyboard in Resources */,
 				CC7430CA25363DEC0041D3FB /* TableViewLoadingCell.xib in Resources */,
 				CC9978A52532408C0071EFCD /* Assets.xcassets in Resources */,
@@ -352,8 +382,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC7430B22533193E0041D3FB /* ReachabilityActionDelegate.swift in Sources */,
+				CC5C425E2538CE3C003DCD9F /* TableViewComicCell.swift in Sources */,
 				CC74309425330AE00041D3FB /* WebService.swift in Sources */,
 				CC7430A3253312940041D3FB /* URL+ParameterEncodings.swift in Sources */,
+				CC5C426A2538D197003DCD9F /* TableViewSectionHeader.swift in Sources */,
 				CC7430C725363DE10041D3FB /* TableViewLoadingCell.swift in Sources */,
 				CC7430AF253316640041D3FB /* ReachabilityService.swift in Sources */,
 				CC74309D25330EB00041D3FB /* WebServiceError.swift in Sources */,

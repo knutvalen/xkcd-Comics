@@ -7,4 +7,5 @@ final class TableViewLoadingCell: UITableViewCell {
 		activityIndicator.startAnimating()
 		return self
 	}
+	
 }

@@ -6,5 +6,6 @@ struct Constants {
 	struct BackendAPI {
 		static let endpoint = "http://xkcd.com"
 		static let comicNumber = "/%@/info.0.json"
+		static let current = "/info.0.json"
 	}
 }
