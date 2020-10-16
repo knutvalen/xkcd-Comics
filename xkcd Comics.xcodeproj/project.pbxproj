@@ -15,9 +15,11 @@
 		CC5C42672538D18F003DCD9F /* TableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5C42662538D18F003DCD9F /* TableViewSectionHeader.xib */; };
 		CC5C426A2538D197003DCD9F /* TableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C42692538D197003DCD9F /* TableViewSectionHeader.swift */; };
 		CC5C427225395DA3003DCD9F /* ComicDetailsScreenTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C427125395DA3003DCD9F /* ComicDetailsScreenTypes.swift */; };
-		CC5C427525395E50003DCD9F /* ComicDetailsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C427425395E50003DCD9F /* ComicDetailsScreenView.swift */; };
+		CC5C427525395E50003DCD9F /* ComicDetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C427425395E50003DCD9F /* ComicDetailsScreenViewController.swift */; };
 		CC5C427825395E6E003DCD9F /* ComicDetailsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C427725395E6E003DCD9F /* ComicDetailsScreenPresenter.swift */; };
 		CC5C427B25395EA5003DCD9F /* ComicDetailsScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C427A25395EA5003DCD9F /* ComicDetailsScreenRouter.swift */; };
+		CC5C4283253960C4003DCD9F /* ComicDetailsScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5C4282253960C4003DCD9F /* ComicDetailsScreenStoryboard.storyboard */; };
+		CC5C428625396271003DCD9F /* ComicDetailsScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C428525396271003DCD9F /* ComicDetailsScreenInteractor.swift */; };
 		CC743077253255530041D3FB /* ComicListScreenTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC743076253255530041D3FB /* ComicListScreenTypes.swift */; };
 		CC74307C2532563E0041D3FB /* ComicListScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74307B2532563E0041D3FB /* ComicListScreenRouter.swift */; };
 		CC74307F2532571E0041D3FB /* ComicListScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC74307E2532571E0041D3FB /* ComicListScreenStoryboard.storyboard */; };
@@ -53,9 +55,11 @@
 		CC5C42662538D18F003DCD9F /* TableViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewSectionHeader.xib; sourceTree = "<group>"; };
 		CC5C42692538D197003DCD9F /* TableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionHeader.swift; sourceTree = "<group>"; };
 		CC5C427125395DA3003DCD9F /* ComicDetailsScreenTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsScreenTypes.swift; sourceTree = "<group>"; };
-		CC5C427425395E50003DCD9F /* ComicDetailsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsScreenView.swift; sourceTree = "<group>"; };
+		CC5C427425395E50003DCD9F /* ComicDetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsScreenViewController.swift; sourceTree = "<group>"; };
 		CC5C427725395E6E003DCD9F /* ComicDetailsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsScreenPresenter.swift; sourceTree = "<group>"; };
 		CC5C427A25395EA5003DCD9F /* ComicDetailsScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsScreenRouter.swift; sourceTree = "<group>"; };
+		CC5C4282253960C4003DCD9F /* ComicDetailsScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComicDetailsScreenStoryboard.storyboard; sourceTree = "<group>"; };
+		CC5C428525396271003DCD9F /* ComicDetailsScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsScreenInteractor.swift; sourceTree = "<group>"; };
 		CC743076253255530041D3FB /* ComicListScreenTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenTypes.swift; sourceTree = "<group>"; };
 		CC74307B2532563E0041D3FB /* ComicListScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListScreenRouter.swift; sourceTree = "<group>"; };
 		CC74307E2532571E0041D3FB /* ComicListScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComicListScreenStoryboard.storyboard; sourceTree = "<group>"; };
@@ -146,7 +150,8 @@
 		CC5C426D25395D39003DCD9F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CC5C427425395E50003DCD9F /* ComicDetailsScreenView.swift */,
+				CC5C4282253960C4003DCD9F /* ComicDetailsScreenStoryboard.storyboard */,
+				CC5C427425395E50003DCD9F /* ComicDetailsScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 		CC5C426E25395D4A003DCD9F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				CC5C428525396271003DCD9F /* ComicDetailsScreenInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5C42672538D18F003DCD9F /* TableViewSectionHeader.xib in Resources */,
+				CC5C4283253960C4003DCD9F /* ComicDetailsScreenStoryboard.storyboard in Resources */,
 				CC74307F2532571E0041D3FB /* ComicListScreenStoryboard.storyboard in Resources */,
 				CC5C42622538CE43003DCD9F /* TableViewComicCell.xib in Resources */,
 				CC9978A82532408C0071EFCD /* LaunchScreen.storyboard in Resources */,
@@ -446,7 +453,8 @@
 				CC7430B82533A4E30041D3FB /* ComicListScreenInteractor.swift in Sources */,
 				CC5C425A253645B5003DCD9F /* TableViewRowViewModel.swift in Sources */,
 				CC7430A9253313AA0041D3FB /* HTTPMethod.swift in Sources */,
-				CC5C427525395E50003DCD9F /* ComicDetailsScreenView.swift in Sources */,
+				CC5C428625396271003DCD9F /* ComicDetailsScreenInteractor.swift in Sources */,
+				CC5C427525395E50003DCD9F /* ComicDetailsScreenViewController.swift in Sources */,
 				CC99789C253240890071EFCD /* AppDelegate.swift in Sources */,
 				CC5C4257253644CB003DCD9F /* TableViewSectionViewModel.swift in Sources */,
 				CC7430BE2534C7AD0041D3FB /* HTTPLogger.swift in Sources */,

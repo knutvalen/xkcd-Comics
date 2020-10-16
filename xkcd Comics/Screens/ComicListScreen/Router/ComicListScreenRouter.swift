@@ -20,7 +20,9 @@ final class ComicListScreenRouter: ComicListScreenRouterType {
 		from view: ComicListScreenViewType,
 		comicModel: ComicModel
 	) {
-		// TODO
+		guard let comicDetailsScreen = ComicDetailsScreenRouter.create(comicModel: comicModel) else { return }
+		(view as? UIViewController)?.navigationController?
+			.pushViewController(comicDetailsScreen, animated: true)
 	}
 	
 }

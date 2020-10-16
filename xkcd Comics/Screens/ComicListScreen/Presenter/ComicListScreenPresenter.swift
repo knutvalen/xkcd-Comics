@@ -67,7 +67,7 @@ final class ComicListScreenPresenter: ComicListScreenPresenterType {
 	
 	// MARK: - ComicListScreenPresenterType
 	
-	func viewDidAppear() {
+	func viewDidLoad() {
 		refresh()
 	}
 	
@@ -157,6 +157,16 @@ final class ComicListScreenPresenter: ComicListScreenPresenterType {
 		view.refresh()
 		
 		interactor.getLatestComic() { (data, error) in
+			if let error = error {
+				switch error {
+				case .noNetwork:
+					self.refresh()
+					
+				default:
+					break
+				}
+			}
+			
 			if let data = data,
 			   let entity = try? JSONDecoder().decode(ComicModel.self, from: data),
 			   let latestComicNumber = entity.number

@@ -14,6 +14,7 @@ final class ComicListScreenViewController:
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		presenter?.viewDidLoad()
 		title = "xkcd Comics"
 		tableView.backgroundColor = .clear
 		
@@ -40,11 +41,6 @@ final class ComicListScreenViewController:
 			for: .valueChanged
 		)
 		tableView.refreshControl = refreshControl
-	}
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		presenter?.viewDidAppear()
 	}
 	
 	// MARK: - ComicListScreenViewType
