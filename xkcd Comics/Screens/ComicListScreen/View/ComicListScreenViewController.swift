@@ -12,10 +12,9 @@ final class ComicListScreenViewController:
 	
 	// MARK: - UIViewController
 	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		presenter?.viewDidAppear()
-		
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		title = "xkcd Comics"
 		tableView.backgroundColor = .clear
 		
 		tableView.register(
@@ -33,12 +32,34 @@ final class ComicListScreenViewController:
 			),
 			forCellReuseIdentifier: "TableViewComicCell"
 		)
+		
+		let refreshControl = UIRefreshControl()
+		refreshControl.addTarget(
+			self,
+			action: #selector(onRefreshControl),
+			for: .valueChanged
+		)
+		tableView.refreshControl = refreshControl
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		presenter?.viewDidAppear()
 	}
 	
 	// MARK: - ComicListScreenViewType
 	
 	func refresh() {
 		tableView.reloadData()
+	}
+	
+	func setLoading(_ loading: Bool) {
+		if loading {
+			tableView.refreshControl?.beginRefreshing()
+		} else {
+			tableView.refreshControl?.endRefreshing()
+		}
+		
 	}
 	
 	// MARK: - UITableViewDataSource
@@ -77,14 +98,6 @@ final class ComicListScreenViewController:
 		)
 	}
 	
-	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		if presenter?.getViewModel(for: indexPath) == nil {
-			return CGFloat(80)
-		}
-		
-		return UITableView.automaticDimension
-	}
-	
 	// MARK: - UITableViewDelegate
 	
 	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -114,9 +127,28 @@ final class ComicListScreenViewController:
 		presenter?.didSelectTableViewCell(at: indexPath)
 	}
 	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		if presenter?.getViewModel(for: indexPath) == nil,
+		   let comicCell = TableViewComicCell.loadXIB()
+		{
+			let optimalSize = comicCell.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+			return optimalSize.height
+		}
+		
+		return UITableView.automaticDimension
+	}
+	
 	// MARK: - UITableViewDataSourcePrefetching
 	
 	func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
 		presenter?.prefetch(indexPaths: indexPaths)
 	}
+	
+	// MARK: - Private functions
+	
+	@objc
+	private func onRefreshControl(_ refreshControl: UIRefreshControl) {
+		presenter?.refresh()
+	}
+	
 }

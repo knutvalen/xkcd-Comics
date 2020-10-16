@@ -8,4 +8,14 @@ final class TableViewComicCell: UITableViewCell {
 		return self
 	}
 	
+	static func loadXIB() -> TableViewComicCell? {
+		guard let view = UINib(nibName: "TableViewComicCell", bundle: .main)
+			.instantiate(withOwner: self, options: nil)
+			.first
+			as? TableViewComicCell
+			else { return nil }
+		
+		return view
+	}
+	
 }

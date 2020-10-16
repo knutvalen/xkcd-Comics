@@ -3,6 +3,7 @@ import UIKit
 
 protocol ComicListScreenViewType {
 	func refresh()
+	func setLoading(_ loading: Bool)
 }
 
 protocol ComicListScreenInteractorType {
@@ -23,6 +24,7 @@ protocol ComicListScreenPresenterType {
 	func getSectionViewModel(for section: Int) -> TableViewSectionViewModel?
 	func didSelectTableViewCell(at indexPath: IndexPath)
 	func getNumberOfRowsInSection(_ section: Int) -> Int
+	func refresh()
 }
 
 protocol ComicListScreenRouterType {

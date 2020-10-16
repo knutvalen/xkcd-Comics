@@ -38,6 +38,7 @@ final class ComicListScreenPresenter: ComicListScreenPresenterType {
 		isLoading = [:]
 		buildViewModels()
 		view.refresh()
+		view.setLoading(false)
 	}
 	
 	private func buildViewModels() {
@@ -67,34 +68,7 @@ final class ComicListScreenPresenter: ComicListScreenPresenterType {
 	// MARK: - ComicListScreenPresenterType
 	
 	func viewDidAppear() {
-		// reset data source
-		comicModels = []
-		buildViewModels()
-		
-		interactor.getLatestComic() { (data, error) in
-			if let data = data,
-			   let entity = try? JSONDecoder().decode(ComicModel.self, from: data),
-			   let latestComicNumber = entity.number
-			{
-				self.totalNumberOfComics = latestComicNumber
-				
-				// load the latest comics
-				for i in 0 ..< 30 {
-					let comicNumber = latestComicNumber - i
-					self.isLoading[comicNumber] = true
-					
-					self.interactor.getComic(comicNumber: comicNumber) { (data, error) in
-						if let data = data,
-						   let entity = try? JSONDecoder().decode(ComicModel.self, from: data),
-						   let comicNumber = entity.number
-						{
-							self.comicModels.append(entity)
-							self.onLoaded(comicNumber: comicNumber)
-						}
-					}
-				}
-			}
-		}
+		refresh()
 	}
 	
 	func prefetch(indexPaths: [IndexPath]) {
@@ -172,6 +146,40 @@ final class ComicListScreenPresenter: ComicListScreenPresenterType {
 			else { return 0 }
 		
 		return totalNumberOfComics
+	}
+	
+	func refresh() {
+		// reset data source
+		comicModels = []
+		totalNumberOfComics = nil
+		buildViewModels()
+		view.setLoading(true)
+		view.refresh()
+		
+		interactor.getLatestComic() { (data, error) in
+			if let data = data,
+			   let entity = try? JSONDecoder().decode(ComicModel.self, from: data),
+			   let latestComicNumber = entity.number
+			{
+				self.totalNumberOfComics = latestComicNumber
+				
+				// load the latest comics
+				for i in 0 ..< 30 {
+					let comicNumber = latestComicNumber - i
+					self.isLoading[comicNumber] = true
+					
+					self.interactor.getComic(comicNumber: comicNumber) { (data, error) in
+						if let data = data,
+						   let entity = try? JSONDecoder().decode(ComicModel.self, from: data),
+						   let comicNumber = entity.number
+						{
+							self.comicModels.append(entity)
+							self.onLoaded(comicNumber: comicNumber)
+						}
+					}
+				}
+			}
+		}
 	}
 	
 }
