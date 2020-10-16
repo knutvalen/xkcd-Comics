@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 protocol ComicListScreenViewType {
 	func refresh()
@@ -21,8 +22,10 @@ protocol ComicListScreenPresenterType {
 	func getViewModels() -> [TableViewSectionViewModel]
 	func getSectionViewModel(for section: Int) -> TableViewSectionViewModel?
 	func didSelectTableViewCell(at indexPath: IndexPath)
+	func getNumberOfRowsInSection(_ section: Int) -> Int
 }
 
 protocol ComicListScreenRouterType {
-	
+	static func create() -> UIViewController?
+	func navigateToComicDetailsScreen(from view: ComicListScreenViewType, comicModel: ComicModel)
 }

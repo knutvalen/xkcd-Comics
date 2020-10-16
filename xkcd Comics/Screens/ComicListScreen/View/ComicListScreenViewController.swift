@@ -44,7 +44,7 @@ final class ComicListScreenViewController:
 	// MARK: - UITableViewDataSource
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return presenter?.getSectionViewModel(for: section)?.rows.count ?? 0
+		return presenter?.getNumberOfRowsInSection(section) ?? 0
 	}
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
@@ -68,6 +68,14 @@ final class ComicListScreenViewController:
 			withIdentifier: "TableViewLoadingCell",
 			for: indexPath
 		)
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		if presenter?.getViewModel(for: indexPath) == nil {
+			return CGFloat(80)
+		}
+		
+		return UITableView.automaticDimension
 	}
 	
 	// MARK: - UITableViewDelegate

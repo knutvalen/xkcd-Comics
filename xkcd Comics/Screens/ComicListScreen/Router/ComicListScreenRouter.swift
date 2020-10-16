@@ -16,4 +16,11 @@ final class ComicListScreenRouter: ComicListScreenRouterType {
 		return view
 	}
 	
+	func navigateToComicDetailsScreen(
+		from view: ComicListScreenViewType,
+		comicModel: ComicModel
+	) {
+		// TODO
+	}
+	
 }
