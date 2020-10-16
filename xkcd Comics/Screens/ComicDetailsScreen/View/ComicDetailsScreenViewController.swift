@@ -9,15 +9,15 @@ final class ComicDetailsScreenViewController:
 	
 	// MARK: - UIViewController
 	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		presenter?.viewWillAppear()
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		presenter?.viewDidLoad()
 	}
 	
 	// MARK: - ComicDetailsScreenViewType
 	
 	func refresh() {
-		
+		imageView.image = presenter?.image
 	}
 	
 	func setLoading(_ loading: Bool) {

@@ -11,7 +11,12 @@ final class ComicDetailsScreenRouter: ComicDetailsScreenRouterType {
 		
 		let interactor = ComicDetailsScreenInteractor(webService: webService)
 		let router = ComicDetailsScreenRouter()
-		let presenter = ComicDetailsScreenPresenter(view: view, interactor: interactor, router: router)
+		let presenter = ComicDetailsScreenPresenter(
+			view: view,
+			interactor: interactor,
+			router: router,
+			comicModel: comicModel
+		)
 		view.presenter = presenter
 		return view
 	}

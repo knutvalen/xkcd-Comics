@@ -8,12 +8,14 @@ protocol ComicDetailsScreenViewType {
 
 protocol ComicDetailsScreenInteractorType {
 	func getComicImage(
+		imageUri: String,
 		completionHandler: @escaping (UIImage?, WebServiceError?) -> Void
 	)
 }
 
 protocol ComicDetailsScreenPresenterType {
-	func viewWillAppear()
+	func viewDidLoad()
+	var image: UIImage? { get }
 }
 
 protocol ComicDetailsScreenRouterType {
