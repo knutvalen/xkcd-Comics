@@ -62,6 +62,13 @@ final class ComicListScreenViewController:
 			) as? TableViewComicCell {
 				return cell.configure(viewModel: viewModel)
 			}
+		} else {
+			if let cell = tableView.dequeueReusableCell(
+				withIdentifier: "TableViewLoadingCell",
+				for: indexPath
+			) as? TableViewLoadingCell {
+				return cell.configure()
+			}
 		}
 		
 		return tableView.dequeueReusableCell(

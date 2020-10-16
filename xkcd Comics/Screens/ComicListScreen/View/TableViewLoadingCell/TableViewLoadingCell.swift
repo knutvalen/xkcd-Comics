@@ -4,7 +4,7 @@ final class TableViewLoadingCell: UITableViewCell {
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
 	func configure() -> TableViewLoadingCell {
-//		activityIndicator.startAnimating()
+		activityIndicator.startAnimating()
 		return self
 	}
 	

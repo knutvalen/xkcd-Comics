@@ -113,7 +113,17 @@ final class ComicListScreenPresenter: ComicListScreenPresenterType {
 			if comicNumber < lastViewModelID {
 				if isLoading[comicNumber] == true { continue }
 				print("prefetch comicNumber " + comicNumber.description)
-				// TODO
+				isLoading[comicNumber] = true
+				
+				interactor.getComic(comicNumber: comicNumber) { (data, error) in
+					if let data = data,
+					   let entity = try? JSONDecoder().decode(ComicModel.self, from: data),
+					   let comicNumber = entity.number
+					{
+						self.comicModels.append(entity)
+						self.onLoaded(comicNumber: comicNumber)
+					}
+				}
 			}
 		}
 	}
